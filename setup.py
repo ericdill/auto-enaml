@@ -9,7 +9,7 @@ setup(
     url='https://github.com/blink1073/auto-enaml',
     description='Utilities for auto generation of Enaml widgets',
     long_description=open('README.rst').read(),
-    packages=find_packages(),
+    packages=find_packages(include='*.enaml'),
     package_data={'auto_enaml': ['*.enaml'],
                   'auto_enaml.tests': ['*.enaml'],
                   'auto_enaml.widgets': ['*.enaml']},
