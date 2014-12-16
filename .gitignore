@@ -3,3 +3,5 @@ __enamlcache__
 dist
 build
 *.egg-info
+
+.idea/

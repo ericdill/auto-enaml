@@ -1,0 +1,30 @@
+package:
+  name: auto-enaml
+  version: {{ environ['GIT_DESCRIBE_TAG'] }}.post{{ environ['GIT_DESCRIBE_NUMBER'] }}
+
+source:
+  git_url: ../
+
+build:
+  number: 0
+
+  # Note that this will override the default build string with the Python
+  # and NumPy versions
+  string: {{ environ.get('GIT_BUILD_STR', '') }}_py{{ py }}
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+    - enaml
+    - atom
+
+test:
+  imports:
+    - auto_enaml
+    - auto_enaml.api
+    - auto_enaml.auto_view
+    - auto_enaml.utils

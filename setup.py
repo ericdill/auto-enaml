@@ -10,7 +10,8 @@ setup(
     description='Utilities for auto generation of Enaml widgets',
     long_description=open('README.rst').read(),
     packages=find_packages(),
-    package_data={'auto_enaml.tests': ['*.enaml'],
+    package_data={'auto_enaml': ['*.enaml'],
+                  'auto_enaml.tests': ['*.enaml'],
                   'auto_enaml.widgets': ['*.enaml']},
     requires=[
     ],
